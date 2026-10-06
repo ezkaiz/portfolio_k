@@ -86,7 +86,7 @@
 // Typing effect
 (function () {
   const el = document.getElementById("typed");
-  const phrases = ["the void.", "the dark arts.", "Kai's web.", "clean code."];
+  const phrases = ["the void.", "the dark arts.", "KYLA's web.", "clean code."];
   let pi = 0, ci = 0, deleting = false;
 
   function type() {
@@ -154,7 +154,7 @@
     if (message.length < 10)
       return (error.textContent = "Message should be at least 10 characters.");
 
-    // Open Gmail compose addressed to Kyla with the user's details pre-filled.
+    // Open Gmail compose addressed to KYLA with the user's details pre-filled.
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
     const gmailUrl =
       "https://mail.google.com/mail/?view=cm&fs=1&to=kylapiodos72@gmail.com" +
