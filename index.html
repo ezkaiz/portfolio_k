@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal portfolio website for a full-stack developer and product builder."
+    />
+    <title>Kyla | Phantom Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="fog-canvas" aria-hidden="true"></canvas>
+    <div id="cursor-glow" aria-hidden="true"></div>
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Go to top">
+          <span class="brand-mark">K</span>
+          <span class="brand-name">Kyla<span class="phantom-dot">.</span></span>
+        </a>
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#accounts">Accounts</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-button">Summon me</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">// full-stack developer</p>
+            <h1>
+              <span class="glitch" data-text="Signals from">Signals from</span><br />
+              <span id="typed" class="typed"></span><span class="caret">▌</span>
+            </h1>
+            <p class="lead">
+              I design and develop clean, efficient web experiences for businesses,
+              startups, and personal brands—combining strong front-end execution with
+              reliable back-end logic.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projects">View projects</a>
+              <a class="btn btn-secondary" href="#contact">Let's talk</a>
+            </div>
+
+            <ul class="stats" aria-label="Highlights">
+              <li>
+                <strong>3+</strong>
+                <span>Years experience</span>
+              </li>
+              <li>
+                <strong>20+</strong>
+                <span>Projects shipped</span>
+              </li>
+              <li>
+                <strong>100%</strong>
+                <span>Focus on quality</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-panel" aria-label="Profile summary card">
+            <div class="panel-top">
+              <span class="status-dot"></span>
+              <span>Available for freelance work</span>
+            </div>
+
+            <div class="profile-block">
+              <div class="avatar">KP</div>
+              <div>
+                <p class="mini-label">Name</p>
+                <h2>Kyla Piodos</h2>
+              </div>
+            </div>
+
+            <div class="info-list">
+              <div>
+                <span>Specialty</span>
+                <strong>Web Development/Layout Artist</strong>
+              </div>
+              <div>
+                <span>Stack</span>
+                <strong>HTML · CSS · JavaScript · PHP</strong>
+              </div>
+              <div>
+                <span>Focus</span>
+                <strong>Responsive design & product UX</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">// about me</p>
+            <h2>Simple systems. Clean design. Real results.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="reveal">
+              <p>
+                I'm a developer who enjoys turning rough ideas into polished digital
+                experiences. My work blends design thinking with practical coding,
+                ensuring each website is attractive, readable, and built to perform.
+              </p>
+              <p>
+                I focus on creating professional portfolios, business websites, and
+                product landing pages that feel modern, trustworthy, and easy to use.
+              </p>
+            </div>
+
+            <div class="feature-box reveal">
+              <h3>What I bring</h3>
+              <ul>
+                <li>Clean, responsive front-end builds</li>
+                <li>Strong attention to UX and readability</li>
+                <li>Fast, maintainable code structure</li>
+                <li>Clear communication and project ownership</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section dark-panel">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">// expertise</p>
+            <h2>Tools and skills I use to build websites.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Layouts</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>Backend</h3>
+              <ul>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>REST APIs</li>
+                <li>Authentication</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>Workflow</h3>
+              <ul>
+                <li>Git &amp; GitHub</li>
+                <li>Deployment</li>
+                <li>UI/UX Thinking</li>
+                <li>Maintenance</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">// selected work</p>
+            <h2>Recent projects and product builds.</h2>
+          </div>
+
+          <div class="project-filters reveal" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+            <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card reveal" data-category="business">
+              <div class="project-badge">Business Website</div>
+              <h3>Brand Portfolio</h3>
+              <p>
+                A premium-style personal site with strong typography, clean sections,
+                and conversion-focused content layout.
+              </p>
+              <ul>
+                <li>Responsive landing page</li>
+                <li>Custom visual identity</li>
+                <li>Fast and mobile-friendly</li>
+              </ul>
+              <a href="#contact">View project</a>
+            </article>
+
+            <article class="project-card reveal" data-category="dashboard">
+              <div class="project-badge">Dashboard</div>
+              <h3>Admin Panel</h3>
+              <p>
+                A practical dashboard interface for managing users, tracking metrics,
+                and presenting key information in a clean structure.
+              </p>
+              <ul>
+                <li>Clean data presentation</li>
+                <li>Interactive interface</li>
+                <li>Scalable component layout</li>
+              </ul>
+              <a href="#contact">View project</a>
+            </article>
+
+            <article class="project-card reveal" data-category="ecommerce">
+              <div class="project-badge">E-commerce</div>
+              <h3>Storefront Build</h3>
+              <p>
+                A branded online shop experience designed for clarity, trust, and a
+                smoother customer journey across devices.
+              </p>
+              <ul>
+                <li>Product showcase</li>
+                <li>Conversion-focused layout</li>
+                <li>Modern user experience</li>
+              </ul>
+              <a href="#contact">View project</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="accounts" class="section dark-panel">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">// find me online</p>
+            <h2>My accounts — one click away.</h2>
+          </div>
+
+          <div class="accounts-grid">
+            <a class="account-card reveal" href="https://www.facebook.com/ezkaix" target="_blank" rel="noreferrer">
+              <span class="account-icon">f</span>
+              <h3>Facebook</h3>
+              <p>facebook.com/ezkaix</p>
+            </a>
+
+            <a class="account-card reveal" href="https://github.com/ezkaiz" target="_blank" rel="noreferrer">
+              <span class="account-icon">&lt;/&gt;</span>
+              <h3>GitHub</h3>
+              <p>github.com/ezkaiz</p>
+            </a>
+
+            <a class="account-card reveal" href="https://mail.google.com/mail/?view=cm&fs=1&to=kylapiodos72@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noreferrer">
+              <span class="account-icon">@</span>
+              <h3>Email</h3>
+              <p>kylapiodos72@gmail.com</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div>
+              <p class="eyebrow">// let's work together</p>
+              <h2>Need a portfolio, landing page, or custom web app?</h2>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                <label>
+                  Name
+                  <input type="text" id="cf-name" placeholder="Your name" />
+                </label>
+                <label>
+                  Email
+                  <input type="email" id="cf-email" placeholder="you@example.com" />
+                </label>
+                <label>
+                  Message
+                  <textarea id="cf-message" rows="4" placeholder="Tell me about your project..."></textarea>
+                </label>
+                <p id="cf-error" class="form-error" role="alert"></p>
+                <p id="cf-success" class="form-success"></p>
+                <button type="submit" class="btn btn-primary">Send message</button>
+              </form>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Kyla Piodos</p>
+        <nav aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#accounts">Accounts</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
